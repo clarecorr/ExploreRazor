@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@*Qu 1: Write a program to convert following datatypes:
+
+    String “32” into int
+    Float “12.52” into float
+    Decimal “123.345” into decimal.
+    You must check type of value before converting.*@
+
+@{
+    var exString = "32";
+    var exFloat = "12.52";
+    var exDecimal = "123.345";
+
+    int stringAsInt;
+    if (exString.IsInt() == true)
+    {
+        stringAsInt = exString.AsInt();
+        <h2>String as int = @stringAsInt</h2>
+    }
+    else
+    {
+        <h2>is not an integer</h2>
+    }
+
+
+    float stringAsFloat;
+    if (exFloat.IsFloat() == true)
+    {
+        stringAsFloat = exFloat.AsFloat();
+        <h2>String as float = @stringAsFloat</h2>
+    }
+    else
+    {
+        <h2>not a float</h2>
+    }
+
+    decimal stringAsDec;
+    if (exDecimal.IsDecimal() == true)
+    {
+        stringAsDec = exDecimal.AsDecimal();
+        <h2>String as dec = @stringAsDec</h2>
+    }
+    else
+    {
+        <h2>not a dec</h2>
+    }
+
+}
+
+
